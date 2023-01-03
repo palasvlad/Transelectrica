@@ -17,7 +17,7 @@ option.add_argument('--disable-dev-sh-usage')
 URL = "https://www.transelectrica.ro/"
 #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
 
-driver = webdriver.Chrome(executable_path='/usr/local/bin/', options=option)
+driver = webdriver.Chrome(executable_path='/usr/local/bin/')
 
 driver.get('https://www.transelectrica.ro/')
 time.sleep(10)
