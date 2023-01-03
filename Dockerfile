@@ -1,12 +1,16 @@
-#Create a directory to work in
-mkdir Transelectrica
-cd Transelectrica
-
-#create an exampele file - maybe to the git pull here?
-touch somefile.txt
-
-#build an image using the current directory as context, and a docker file passed through stdin
-docker build -t transimage:latest -f-
+#Specify the parent image from which we build
 FROM ubuntu:latest
-COPY somefile.txt ./
-RUN cat /somefile.txt
+
+#Set the working directory
+
+WORKDIR /app
+
+#Copy files from host
+
+COPY GetFromTransElectrica.py
+
+#BUILD the aplication
+
+# Run the application
+
+CMD["python GetFromTranselectrica"]
