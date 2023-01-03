@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  my-service:
+    image: python:3.9
+    volumes:
+      - ./:/Transelectirca
+    working_dir: /Transelectrica
+    command: python GetFromTransElectrica.py
