@@ -10,7 +10,7 @@ WORKDIR /app
 COPY GetFromTransElectrica.py .
 
 RUN pip install beautifulsoup4 && \
-    pip install selenium
+    pip install selenium && \
     pip install webdriver-manager
 
 #BUILD the aplication
