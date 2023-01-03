@@ -17,7 +17,7 @@ URL = "https://www.transelectrica.ro/"
 #works on windows-> driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver = webdriver.Chrome(chrome_options=option)
 driver.get('https://www.transelectrica.ro/')
-driver.implicitly_wait(60)
+driver.implicitly_wait(30)
 
 soup = BeautifulSoup(driver.page_source, 'html.parser')
 print(soup.text)
