@@ -11,7 +11,8 @@ COPY GetFromTransElectrica.py .
 
 RUN pip install beautifulsoup4 && \
     pip install selenium && \
-    pip install webdriver-manager
+    pip install webdriver-manager && \
+    pip install PyMySQL
 
 #BUILD the aplication
 
