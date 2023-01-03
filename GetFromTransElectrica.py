@@ -15,6 +15,8 @@ option.add_argument('--no-sandbox')
 option.add_argument('--window-size=1920,1080')
 option.add_argument('--disable-gpu')
 option.add_argument('--disable-dev-sh-usage')
+option.binary_location='/usr/local/bin/chromedriver'
+chrome_driver_binary ='/usr/local/bin/chromedriver'
 
 URL = "https://www.transelectrica.ro/"
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
