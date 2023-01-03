@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import re
@@ -16,7 +17,7 @@ URL = "https://www.transelectrica.ro/"
 #works on windows-> driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver = webdriver.Chrome(chrome_options=option)
 driver.get('https://www.transelectrica.ro/')
-
+wait = WebDriverWait(driver, 60)
 
 soup = BeautifulSoup(driver.page_source, 'html.parser')
 print(soup.text)
