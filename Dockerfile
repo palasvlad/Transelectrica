@@ -7,7 +7,7 @@ WORKDIR /app
 
 #Copy files from host
 
-COPY GetFromTransElectrica.py
+COPY GetFromTransElectrica.py .
 
 #BUILD the aplication
 
