@@ -30,7 +30,7 @@ RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 ENV DISPLAY=:99
 
 # install selenium
-RUN pip install selenium==3.8.0
+RUN pip install selenium
 
 # END FROM ZE INTERNET
 
