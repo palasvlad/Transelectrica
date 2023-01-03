@@ -13,4 +13,4 @@ COPY GetFromTransElectrica.py .
 
 # Run the application
 
-CMD["python GetFromTranselectrica"]
+RUN python GetFromTransElectrica.py
