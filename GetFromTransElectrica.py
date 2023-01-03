@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import re
 import pymysql
+import time
 
 option = webdriver.ChromeOptions()
 option.add_argument('--headless')
@@ -14,10 +15,11 @@ option.add_argument('--disable-gpu')
 option.add_argument('--disable-dev-sh-usage')
 
 URL = "https://www.transelectrica.ro/"
-#works on windows-> driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver = webdriver.Chrome(chrome_options=option)
+
 driver.get('https://www.transelectrica.ro/')
-driver.implicitly_wait(30)
+time.sleep(10)
 
 soup = BeautifulSoup(driver.page_source, 'html.parser')
 print(soup.text)
