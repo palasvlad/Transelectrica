@@ -1,5 +1,5 @@
 #Specify the parent image from which we build
-FROM ubuntu:latest
+FROM python:latest
 
 #Set the working directory
 
