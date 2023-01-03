@@ -8,11 +8,22 @@ import pymysql
 option = webdriver.ChromeOptions()
 option.add_argument('--headless')
 option.add_argument('--no-sandbox')
+option.add_argument('--window-size=1920,1080')
+option.add_argument('--disable-gpu')
 option.add_argument('--disable-dev-sh-usage')
 
 URL = "https://www.transelectrica.ro/"
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+#works on windows-> driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+driver = webdriver.Chrome(chrome_options=option)
 driver.get('https://www.transelectrica.ro/')
+
+
+
+screenshot = driver.save_screenshot('test.png')
+driver.quit()
+
+
+
 soup = BeautifulSoup(driver.page_source, 'html.parser')
 #print(soup.text)
 #print (re.findall("(\d*\.?\d+%)\s(Cărbune|Hidrocarburi|Hidro|Nuclear|Eolian|Biomasa|Foto)(\s.\s\d+)", soup.text))
