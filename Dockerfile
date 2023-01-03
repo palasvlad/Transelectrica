@@ -9,6 +9,8 @@ WORKDIR /app
 
 COPY GetFromTransElectrica.py .
 
+RUN pip install beautifulsoup4
+
 #BUILD the aplication
 
 # Run the application
