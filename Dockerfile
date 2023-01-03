@@ -9,7 +9,8 @@ WORKDIR /app
 
 COPY GetFromTransElectrica.py .
 
-RUN pip install beautifulsoup4
+RUN pip install beautifulsoup4 && \
+    pip install selenium
 
 #BUILD the aplication
 
