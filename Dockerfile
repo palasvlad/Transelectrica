@@ -14,6 +14,7 @@ RUN pip install beautifulsoup4 && \
     pip install webdriver-manager && \
     pip install PyMySQL
 
+RUN apt-get install -y chromium-browser
 # from ze internet
 # install google chrome
 #RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
