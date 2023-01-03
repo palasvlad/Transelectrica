@@ -17,8 +17,8 @@ option.add_argument('--disable-gpu')
 option.add_argument('--disable-dev-sh-usage')
 
 URL = "https://www.transelectrica.ro/"
-#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
-driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
+#driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 driver.get('https://www.transelectrica.ro/')
 time.sleep(10)
 
