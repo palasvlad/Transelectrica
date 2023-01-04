@@ -9,7 +9,7 @@ driver = webdriver.Remote(
 )
 
 # Navigate to a web page
-driver.get("https://www.example.com")
+driver.get("https://www.transelectrica.ro/")
 
 # Wait for the page to load
 time.sleep(10)
