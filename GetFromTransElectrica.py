@@ -12,7 +12,6 @@ import time
 option = webdriver.ChromeOptions()
 option.add_argument('--headless')
 option.add_argument('--no-sandbox')
-option.add_argument('--disable-gpu')
 option.add_argument('--disable-dev-sh-usage')
 option.binary_location='/usr/bin/chromedriver'
 chrome_driver_binary ='/usr/bin/chromedriver'
