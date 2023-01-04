@@ -19,7 +19,6 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),optio
 #driver_location = '/usr/bin/chromedriver'
 #binary_location = '/usr/bin/google-chrome'
 driver.get('https://www.transelectrica.ro/')
-time.sleep(30)
 
 soup = BeautifulSoup(driver.page_source, 'html.parser')
 print(soup.text)
