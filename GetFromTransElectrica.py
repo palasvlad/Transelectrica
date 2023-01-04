@@ -11,8 +11,6 @@ option = webdriver.ChromeOptions()
 option.add_argument('--headless')
 option.add_argument('--no-sandbox')
 option.add_argument('--disable-dev-shm-usage')
-#option.binary_location='/usr/bin/chromedriver'
-#chrome_driver_binary ='/usr/bin/chromedriver'
 
 URL = "https://www.transelectrica.ro/"
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
@@ -21,7 +19,7 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),optio
 #driver_location = '/usr/bin/chromedriver'
 #binary_location = '/usr/bin/google-chrome'
 driver.get('https://www.transelectrica.ro/')
-time.sleep(10)
+time.sleep(30)
 
 soup = BeautifulSoup(driver.page_source, 'html.parser')
 print(soup.text)
