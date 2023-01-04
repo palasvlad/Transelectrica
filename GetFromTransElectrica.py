@@ -11,6 +11,7 @@ option = webdriver.ChromeOptions()
 option.add_argument('--headless')
 option.add_argument('--no-sandbox')
 option.add_argument('--disable-dev-shm-usage')
+option.add_argument("--enable-javascript")
 
 URL = "https://www.transelectrica.ro/"
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
