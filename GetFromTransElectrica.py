@@ -1,11 +1,7 @@
 from bs4 import BeautifulSoup
-from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.chrome import ChromeDriverManager
-#from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-import chromedriver_binary
+from selenium import webdriver
 import re
 import pymysql
 import time
@@ -16,16 +12,15 @@ option.add_argument('--headless')
 option.add_argument('--no-sandbox')
 option.add_argument('--disable-dev-sh-usage')
 option.add_argument('--disable-dev-shm-usage')
-option.binary_location='/usr/bin/chromedriver'
-chrome_driver_binary ='/usr/bin/chromedriver'
+#option.binary_location='/usr/bin/chromedriver'
+#chrome_driver_binary ='/usr/bin/chromedriver'
 
 URL = "https://www.transelectrica.ro/"
-#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
 #driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
 #driver_location = '/usr/bin/chromedriver'
 #binary_location = '/usr/bin/google-chrome'
-driver = webdriver.Chrome()
 driver.get('https://www.transelectrica.ro/')
 time.sleep(10)
 
