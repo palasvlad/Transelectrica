@@ -19,8 +19,12 @@ option.binary_location='/usr/bin/chromedriver'
 chrome_driver_binary ='/usr/bin/chromedriver'
 
 URL = "https://www.transelectrica.ro/"
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
+#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
 #driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+
+driver_location = '/usr/bin/chromedriver'
+binary_location = '/usr/bin/google-chrome'
+driver = webdriver.Chrome(executable_path=driver_location,options=options)
 driver.get('https://www.transelectrica.ro/')
 time.sleep(10)
 
