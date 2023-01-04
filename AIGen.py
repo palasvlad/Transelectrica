@@ -13,10 +13,8 @@ driver.get("https://www.example.com")
 
 # Wait for the page to load
 time.sleep(10)
-
+soup = BeautifulSoup(driver.page_source, 'html.parser')
+print(soup.prettify())
 # Close the browser window
 driver.quit()
 
-# Stop and remove the container
-container.stop()
-container.remove()
