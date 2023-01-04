@@ -25,7 +25,7 @@ URL = "https://www.transelectrica.ro/"
 
 #driver_location = '/usr/bin/chromedriver'
 #binary_location = '/usr/bin/google-chrome'
-driver = webdriver.Chrome(executable_path=driver_location,options=option)
+driver = webdriver.Chrome()
 driver.get('https://www.transelectrica.ro/')
 time.sleep(10)
 
