@@ -1,5 +1,5 @@
 import time
-
+from bs4 import BeautifulSoup
 from selenium import webdriver
 
 # Connect to the Selenium server running in the container
