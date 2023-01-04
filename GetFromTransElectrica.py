@@ -3,11 +3,13 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium import webdriver
+#from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
+import chromedriver_binary
 import re
 import pymysql
 import time
+
 
 option = webdriver.ChromeOptions()
 option.add_argument('--headless')
@@ -21,8 +23,8 @@ URL = "https://www.transelectrica.ro/"
 #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
 #driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
-driver_location = '/usr/bin/chromedriver'
-binary_location = '/usr/bin/google-chrome'
+#driver_location = '/usr/bin/chromedriver'
+#binary_location = '/usr/bin/google-chrome'
 driver = webdriver.Chrome(executable_path=driver_location,options=option)
 driver.get('https://www.transelectrica.ro/')
 time.sleep(10)
