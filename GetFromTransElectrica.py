@@ -12,8 +12,8 @@ option.add_argument('--headless')
 option.add_argument('--no-sandbox')
 option.add_argument('--disable-dev-sh-usage')
 option.add_argument('--disable-dev-shm-usage')
-#option.binary_location='/usr/bin/chromedriver'
-#chrome_driver_binary ='/usr/bin/chromedriver'
+option.binary_location='/usr/bin/chromedriver'
+chrome_driver_binary ='/usr/bin/chromedriver'
 
 URL = "https://www.transelectrica.ro/"
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=option)
