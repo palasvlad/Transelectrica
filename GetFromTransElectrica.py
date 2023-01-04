@@ -21,7 +21,7 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),optio
 driver.get('https://www.transelectrica.ro/')
 
 soup = BeautifulSoup(driver.page_source, 'html.parser')
-print(soup.text)
+print(soup.prettify())
 #print (re.findall("(\d*\.?\d+%)\s(Cărbune|Hidrocarburi|Hidro|Nuclear|Eolian|Biomasa|Foto)(\s.\s\d+)", soup.text))
 results = re.findall("(\d*\.?\d+%)\s(Cărbune|Hidrocarburi|Hidro|Nuclear|Eolian|Biomasa|Foto)(\s.\s\d+)", soup.text)
 for element in results:
