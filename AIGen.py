@@ -17,7 +17,7 @@ driver.get("https://www.transelectrica.ro/")
 # Wait for the page to load
 time.sleep(10)
 soup = BeautifulSoup(driver.page_source, 'html.parser')
-print(soup.prettify())
+#print(soup.prettify())
 
 driver.quit()
 
