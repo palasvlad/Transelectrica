@@ -21,9 +21,16 @@ def main(arguments):
     else:
         logging.basicConfig(level=logging.INFO)
 
-    extract_andupload_data_from_page(get_page_content())
-    logging.info("Done")
-    return 0
+    while True:
+        try:
+            extract_andupload_data_from_page(get_page_content())
+            logging.info("Done")
+        except Exception as e:
+            logging.error(e)
+
+        time.sleep(20)
+
+
 
 
 def get_page_content():
