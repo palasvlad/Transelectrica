@@ -6,4 +6,4 @@ services:
     volumes:
       - ./:/Transelectirca
     working_dir: /Transelectrica
-    command: python GetFromTransElectrica.py
+    command: scrape_transelectirca.py
