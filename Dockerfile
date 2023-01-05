@@ -6,14 +6,14 @@ FROM python:latest
 WORKDIR /app
 
 #Copy files from host
+COPY requirements.txt .
 
-COPY GetFromTransElectrica.py .
+# Install the dependencies
+RUN pip install -r requirements.txt
 
-RUN pip install beautifulsoup4 && \
-    pip install selenium && \
-    pip install webdriver-manager && \
-    pip install PyMySQL
+COPY scrape_transelectirca.py .
 
-# Run the application
+RUN chmod +x scrape_transelectirca.py
 
-RUN python scrape_transelectirca.py
+
+CMD["python","scrape_transelectirca.py"]
