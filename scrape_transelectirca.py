@@ -28,7 +28,7 @@ def main(arguments):
         except Exception as e:
             logging.error(e)
 
-        time.sleep(20)
+        time.sleep(180)
 
 
 
