@@ -16,4 +16,4 @@ COPY scrape_transelectirca.py .
 RUN chmod +x scrape_transelectirca.py
 
 
-CMD["python","scrape_transelectirca.py"]
+CMD ["python", "scrape_transelectirca.py"]
