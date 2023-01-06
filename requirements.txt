@@ -1,0 +1,4 @@
+beautifulsoup4==4.11.1
+selenium==4.7.2
+webdriver-manager==3.8.5
+PyMySQL==1.0.2
