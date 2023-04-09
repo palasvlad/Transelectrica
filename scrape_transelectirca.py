@@ -35,7 +35,7 @@ def main(arguments):
 
 def get_page_content():
     # Connect to the Selenium server running in the container
-    driver = webdriver.Remote(command_executor='http://192.168.0.188:4444/wd/hub',options=webdriver.ChromeOptions())
+    driver = webdriver.Remote(command_executor='http://192.168.0.150:4444/wd/hub',options=webdriver.ChromeOptions())
     # Navigate to a web page
     driver.get("https://www.transelectrica.ro/")
     # Wait for the page to load
@@ -83,7 +83,7 @@ def extract_andupload_data_from_page(soup):
             print("Schimb:", float(str(element[1]).strip("MW").strip(" ")))
             p_schimb = int(str(element[1]).strip("MW").strip(" "))
     #connect to database
-    connection = pymysql.connect(host='192.168.0.188',user='vladpalas',password='DePeTudorNeculai',db='db',charset='utf8mb4',cursorclass=pymysql.cursors.DictCursor)
+    connection = pymysql.connect(host='192.168.0.150',user='vladpalas',password='DePeTudorNeculai',db='db',charset='utf8mb4',cursorclass=pymysql.cursors.DictCursor)
     try:
         with connection.cursor() as cursor:
             cursor.callproc('update_transelectrica',('U',p_hidro,p_eolian,p_nuclear,p_carbune,p_hidrocarburi,p_biomasa,p_foto,p_consum,p_productie,p_schimb))
